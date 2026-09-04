@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "bookmarks": [
+    {
+      "id": "1e711de567726a4b",
+      "label": "main entrypoint",
+      "file": "cmd/mark/main.go",
+      "line": 1,
+      "content": "package main",
+      "created_at": "2026-09-04T04:32:33.3167519Z",
+      "author": "yanzyuyu"
+    },
+    {
+      "id": "6b201112368a2139",
+      "label": "store loader",
+      "file": "pkg/bookmark/store.go",
+      "line": 16,
+      "content": "",
+      "created_at": "2026-09-04T04:32:33.5822118Z",
+      "author": "yanzyuyu"
+    },
+    {
+      "id": "4673c1b0c7aed17a",
+      "label": "git root",
+      "file": "pkg/git/git.go",
+      "line": 9,
+      "content": "out, err := exec.Command(\"git\", \"rev-parse\", \"--show-toplevel\").Output()",
+      "created_at": "2026-09-04T04:32:33.689838Z",
+      "author": "yanzyuyu"
+    }
+  ]
+}
