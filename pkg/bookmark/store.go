@@ -47,14 +47,14 @@ func (s *Store) Save() error {
 	return os.WriteFile(s.path, append(data, '\n'), 0644)
 }
 
-func (s *Store) Add(label, file string, line int, author string) (*Bookmark, error) {
+func (s *Store) Add(label, file, absFile string, line int, author string) (*Bookmark, error) {
 	for _, b := range s.Bookmarks {
 		if strings.EqualFold(b.Label, label) {
 			return nil, fmt.Errorf("bookmark %q already exists (use rm to remove it first)", label)
 		}
 	}
 
-	content, err := readLine(file, line)
+	content, err := readLine(absFile, line)
 	if err != nil {
 		return nil, fmt.Errorf("cannot read %s:%d: %w", file, line, err)
 	}

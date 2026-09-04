@@ -103,7 +103,7 @@ func cmdAdd(args []string) {
 
 	absFile := filepath.Join(root, relFile)
 
-	bm, err := s.Add(label, relFile, line, git.Author())
+	bm, err := s.Add(label, relFile, absFile, line, git.Author())
 	if err != nil {
 		die("%v", err)
 	}
