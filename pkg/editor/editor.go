@@ -13,6 +13,11 @@ func Open(file string, line int) error {
 		ed = os.Getenv("VISUAL")
 	}
 	if ed == "" {
+		if p, err := exec.LookPath("code"); err == nil && p != "" {
+			ed = "code"
+		}
+	}
+	if ed == "" {
 		fmt.Printf("%s:%d\n", file, line)
 		return nil
 	}
